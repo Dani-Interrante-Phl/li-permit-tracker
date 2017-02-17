@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>L+I permit application tracker | phila.gov</title>
+    <link rel='icon' type='image/x-icon' href="//cityofphiladelphia.github.io/patterns/images/favicon.ico">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!--Ionicons are optional-->
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!--pattern stylesheet includes foundation css -->
+    <link rel="stylesheet" href="//cityofphiladelphia.github.io/patterns/dist/1.4.1/css/patterns.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="canonical" href="">
+
+  </head>
+
+  <body>
+
+    <!-- Google Tag Manager [phila.gov] -->
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC6CR2"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC6CR2');</script>
+    <!-- End Google Tag Manager -->
+
+    <div class="site" id="page">
+      <!-- Begin .header -->
+<header data-swiftype-index='false' class="site-header">
+  <div class="row site-branding">
+    <div class="small-24 medium-12 columns">
+      <a href="https://beta.phila.gov" class="logo pam">
+        <img src="//cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-white.png" alt="City of Philadelphia">
+      </a>
+      <h1 class="site-title">phila.gov</h1>
+      <h2 class="site-description">City of Philadelphia</h2>
+    </div>
+    <div class="small-24 medium-12 columns">
+      <form class="search" data-global-search>
+  <input type="text" placeholder="Search beta.phila.gov" class="search-field"><input type="submit">
+</form>
+
+    </div>
+  </div>
+  <div class="row expanded">
+  <div class="columns">
+    <div class="row">
+      <div class="large-24 columns">
+        <nav>
+          <ul class="breadcrumbs">
+            <li><a href="https://beta.phila.gov">Home</a></li>
+            <li><a href="http://www.phila.gov/li">L+I</a></li>
+            <li>Permit application tracker</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+</header>
+
+      <article data-swiftype-name="body" data-swiftype-type="text">
+        <div class="row" id="main-row">
+          <div class="large-24 columns">
+
+            <h1 class="contrast">L+I permit application tracker</h1>
+
+            <p class="pvxs mbs">You can use this tool to track the status of your L+I permit application.</p>
+
+            <div class="row pvm mbs">
+              <div class="small-24 medium-17 columns">
+
+                <form>
+                  <label for="id">Type in your application number.</label>
+                  <div class="search">
+                    <input type="text" placeholder="For example: 10901544" class="search-field" id="id" name="id">
+                    <input type="submit">
+                  </div>
+                </form>
+
+                <div id="result" class="pvm mbs">
+                  <script type="text/template" id="tmpl-result">
+                    <h2>Application #{{ application_number }}</h2>
+
+                    <div id="application-details">
+                      <dl>
+                        <dt>Comments</dt>
+                        <dd>{{ comments }}</dd>
+                      </dl>
+
+                      <!-- TODO -->
+                      <!-- Add more fields here -->
+
+                    </div>
+                    <!-- TODO -->
+                    <!-- Add appropriate help email below -->
+                    <!-- <p class="mtl"> Please email <a href="mailto:Philly311@phila.gov">Philly311@phila.gov</a> if you have an issue or question about the status of your request. </p> -->
+                  </script>
+
+                  <script type="text/template" id="tmpl-error">
+                    <span class="error">Application #<b>{{ permit_id }}</b> was not found</span>
+                  </script>
+
+                  <script type="text/template" id="tmpl-loading">
+                    <div><i class="fa fa-spinner fa-lg spin"></i> Loading...</div>
+                  </script>
+                </div>
+
+              </div>
+
+            <aside id="secondary" class="related plm-mu small-24 medium-6 columns">
+              <h3>Related Content</h3>
+              <ul>
+                <!-- TODO -->
+                <!-- Add related content links; see examples below -->
+
+                <!-- <li><a class="external" href="http://iframe.publicstuff.com/#?client_id=242">Submit a Philly311 service request</a></li>
+                <li><a class="external" href="http://www.phila.gov/311/aboutus/Pages/default.aspx">Philly311 contact information</a></li>
+                <li><a class="external" href="https://twitter.com/philly311">Tweet @philly311 for a quick response</a></li> -->
+              </ul>
+            </aside>
+
+          </div>
+        </div>
+    </div><!-- End #page -->
+    <div class="row feedback">
+      <div class="small-24 columns">
+        <div class="panel center mbl"><p>We're still working on this page's design and content. <a href="http://beta.phila.gov/feedback/">How can we make it better?</a></p></div>
+      </div>
+    </div>
+  </article>
+    <!-- Begin Footer -->
+<footer data-swiftype-index='false' class="site-footer">
+  <section class="fat">
+    <div class="row">
+      <div class="large-8 columns">
+        <h1>Government</h1>
+        <nav>
+          <ul>
+            <li><a href="http://beta.phila.gov">beta.phila.gov</a></li>
+            <li><a href="http://beta.phila.gov/departments">City Government Directory</a></li>
+            <li><a href="http://www.phila.gov/mayor">Mayor's Office</a></li>
+            <li><a href="http://iframe.publicstuff.com/#?client_id=242">Report an Issue / 311</a></li>
+            <li><a href="http://cityofphiladelphia.wordpress.com/">News</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="large-16 columns">
+        <h1>Browse beta.phila.gov</h1>
+        <nav>
+          <ul class="columns-2">
+            <li><a href="http://beta.phila.gov/browse/health">Health</a></li>
+            <li><a href="http://beta.phila.gov/browse/legal">Legal</a></li>
+            <li><a href="http://beta.phila.gov/browse/payments-and-taxes">Payments and Taxes</a></li>
+            <li><a href="http://beta.phila.gov/browse/permits-licenses">Permits and Licenses</a></li>
+            <li><a href="http://beta.phila.gov/browse/property-housing">Property and Housing</a></li>
+            <li><a href="http://beta.phila.gov/browse/public-safety">Public Safety</a></li>
+            <li><a href="http://beta.phila.gov/browse/streets-and-utilities">Streets and Utilities</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <div class="row classic center">
+    <div class="columns">
+      <nav>
+        <ul class="inline-list">
+          <li><a href="http://beta.phila.gov/terms-of-use">Terms of use</a></li>
+          <li><a href="http://www.phila.gov/privacy/pdfs/FinalCityOpenRecords.pdf">Right to know (pdf)</a></li>
+          <li><a href="http://beta.phila.gov/privacypolicy">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- End Footer -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.min.js"></script>
+
+    <script src="//cityofphiladelphia.github.io/patterns/dist/1.4.1/js/patterns.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

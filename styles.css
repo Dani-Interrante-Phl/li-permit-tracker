@@ -1,0 +1,15 @@
+#main-row {
+  margin-bottom: 75px;
+}
+
+#request-details dt, #request-details dd {
+  display: inline-block;
+}
+#request-details dl {
+  border-bottom: 1px #a1a1a1 solid;
+  padding-bottom: 5px;
+  margin-bottom: 0.5rem;
+}
+#request-details dt {
+  width: 170px;
+}
