@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>L+I permit application tracker | phila.gov</title>
+    <title>L+I Permit Application Tracker | phila.gov</title>
     <link rel='icon' type='image/x-icon' href="//cityofphiladelphia.github.io/patterns/images/favicon.ico">
     <meta name="description" content="">
 
@@ -60,8 +60,8 @@
         <nav>
           <ul class="breadcrumbs">
             <li><a href="https://beta.phila.gov">Home</a></li>
-            <li><a href="http://www.phila.gov/li">L+I</a></li>
-            <li>Permit application tracker</li>
+            <li><a href="http://www.phila.gov/li">Licenses and Inspections</a></li>
+            <li>Permit Application Tracker</li>
           </ul>
         </nav>
       </div>
@@ -75,9 +75,10 @@
         <div class="row" id="main-row">
           <div class="large-24 columns">
 
-            <h1 class="contrast">L+I permit application tracker</h1>
+            <h1 class="contrast">Licenses and Inspections Permit Application Tracker</h1>
 
             <p class="pvxs mbs">You can use this tool to track the status of your L+I permit application.</p>
+		
 
             <div class="row pvm mbs">
               <div class="small-24 medium-17 columns">
@@ -96,17 +97,35 @@
 
                     <div id="application-details">
                       <dl>
+                        <dt>Application Description</dt>
+                        <dd>{{ apdesc }}</dd>
+                      </dl>
+					  <dl>
+                        <dt>Status</dt>
+                        <dd>{{ stat }}</dd>
+                      </dl>
+					  <dl>
                         <dt>Comments</dt>
                         <dd>{{ comments }}</dd>
                       </dl>
-
-                      <!-- TODO -->
-                      <!-- Add more fields here -->
+					  
+					  <dl>
+                        <dt>Location</dt>
+                        <dd>{{ stno }} {{predir}} {{ stname }} {{ suffix}}</dd>
+                      </dl>
+					  <dl>
+                        <dt>Application Date/Time</dt>
+                        <dd>{{ apdttm }}</dd>
+                      </dl>
+					  <dl>
+                        <dt>Permit Expiration Date</dt>
+                        <dd>{{ suspdt }}</dd>
+                      </dl>
+                   
 
                     </div>
-                    <!-- TODO -->
-                    <!-- Add appropriate help email below -->
-                    <!-- <p class="mtl"> Please email <a href="mailto:Philly311@phila.gov">Philly311@phila.gov</a> if you have an issue or question about the status of your request. </p> -->
+                   
+                  <p class="mtl"> If a review is past due, please email <a href="mailto:permithelp@phila.gov">permithelp@phila.gov</a></p>
                   </script>
 
                   <script type="text/template" id="tmpl-error">

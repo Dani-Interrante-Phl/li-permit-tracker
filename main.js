@@ -31,8 +31,18 @@
         var templateData = {
           application_number:     attrs.APNO,
           comments:               attrs.COMMENTS,
+		  stat:					  attrs.STATUS,
+		  stno:					  attrs.STNO,
+		  predir:				  attrs.PREDIR,
+		  stname:				  attrs.STNAME,
+		  suffix:				  attrs.SUFFIX,
+		  apdttm:		          attrs.APDTTM,
+		  suspdt:				  attrs.SUSPDT,
+		  loc:					  attrs.LOC,
+		  apdesc:				  attrs.APDESC,
         }
-
+	
+		
         // Render template
         resultContainer.html(templates.result(templateData))
       }
