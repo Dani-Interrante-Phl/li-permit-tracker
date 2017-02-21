@@ -36,8 +36,8 @@
 		  predir:				  attrs.PREDIR,
 		  stname:				  attrs.STNAME,
 		  suffix:				  attrs.SUFFIX,
-		  apdttm:		          attrs.APDTTM,
-		  suspdt:				  attrs.SUSPDT,
+		  apdttm:		          moment(attrs.APDTTM).format("dddd, MMMM Do YYYY, h:mm:ss a"),
+		  suspdt:				  moment(attrs.SUSPDT).format("dddd, MMMM Do YYYY, h:mm:ss a"),
 		  loc:					  attrs.LOC,
 		  apdesc:				  attrs.APDESC,
         }
@@ -64,3 +64,4 @@
     }
   }
 })(window.jQuery, window._)
+
