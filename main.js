@@ -21,7 +21,7 @@
       var features = response.features
       if (features.length < 1) {
         // If there's no feature, indicate such
-        resultContainer.html(templates.error({ permit_id : params.id }))
+        resultContainer.html(templates.error({ application_number : params.id }))
       } else {
         // Otherwise display the first feature (which should be the only
         // feature)
@@ -47,7 +47,7 @@
         resultContainer.html(templates.result(templateData))
       }
     }).fail(function () {
-      resultContainer.html(templates.error({ permit_id : params.id }))
+      resultContainer.html(templates.error({ application_number : params.id }))
     })
   }
 
