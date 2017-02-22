@@ -21,7 +21,7 @@
       var features = response.features
       if (features.length < 1) {
         // If there's no feature, indicate such
-        resultContainer.html(templates.error({ service_request_id: params.id }))
+        resultContainer.html(templates.error({ permit_id : params.id }))
       } else {
         // Otherwise display the first feature (which should be the only
         // feature)
