@@ -78,7 +78,7 @@
             <h1 class="contrast">Licenses and Inspections Permit Application Tracker</h1>
 
             <p class="pvxs mbs">You can use this tool to track the status of your L+I permit application.</p>
-		
+			<p class="pvxs mbs"><b>NOTE:</b> Actions made in the last 24 hours may not be reflected on site</p>
 
             <div class="row pvm mbs">
               <div class="small-24 medium-17 columns">
@@ -99,6 +99,12 @@
 
                     <div id="application-details">
                       <dl>
+                        <dt>Location</dt>
+                        <dd><b>{{ stno }} {{predir}} {{ stname }} {{ suffix}}</b></dd>
+                      </dl>
+					  
+					  
+					  <dl>
                         <dt>Application Description</dt>
                         <dd>{{ apdesc }}</dd>
                       </dl>
@@ -111,16 +117,13 @@
                         <dd>{{ comments }}</dd>
                       </dl>
 					  
-					  <dl>
-                        <dt>Location</dt>
-                        <dd>{{ stno }} {{predir}} {{ stname }} {{ suffix}}</dd>
-                      </dl>
+
 					  <dl>
                         <dt>Application Submission Date</dt>
                         <dd>{{ apdttm }}</dd>
                       </dl>
 					  <dl>
-                        <dt>Permit Suspended Date</dt>
+                        <dt>Due Date of Last Review</dt>
                         <dd>{{ suspdt }}</dd>
                       </dl>
                    
@@ -147,9 +150,9 @@
                 <!-- TODO -->
                 <!-- Add related content links; see examples below -->
 
-                <!-- <li><a class="external" href="http://iframe.publicstuff.com/#?client_id=242">Submit a Philly311 service request</a></li>
-                <li><a class="external" href="http://www.phila.gov/311/aboutus/Pages/default.aspx">Philly311 contact information</a></li>
-                <li><a class="external" href="https://twitter.com/philly311">Tweet @philly311 for a quick response</a></li> -->
+                <li><a class="external" href="http://property.phila.gov/">City of Philadelphia - Property Browser</a></li>
+                <li><a class="external" href="http://www.phila.gov/li/aboutus/Pages/Contact.aspx">L+I Contact Information</a></li>
+                <li><a class="external" href="http://www.phila.gov/li/Pages/faq.aspx">L+I FAQ</a></li> 
               </ul>
             </aside>
 
