@@ -37,7 +37,7 @@
 		  stname:				  attrs.STNAME,
 		  suffix:				  attrs.SUFFIX,
 		  apdttm:		          moment(attrs.APDTTM).format("dddd, MMMM Do YYYY"),
-		  suspdt:				  moment(attrs.SUSPDT).format("dddd, MMMM Do YYYY"),
+		  suspdt:				  moment(attrs.SUSPDT).format("dddd, MMMM Do YYYY, h:mm:ss a"),
 		  loc:					  attrs.LOC,
 		  apdesc:				  attrs.APDESC,
         }
