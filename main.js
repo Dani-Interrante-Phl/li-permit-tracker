@@ -1,5 +1,19 @@
 (function ($, _) {
+  // config
   var endpoint = '//gis.phila.gov/arcgis/rest/services/LNI/LI_PERMIT_APPLICATION_STATUS/FeatureServer/1/query'
+  // var FAILED_OR_INCOMPLETE_TEXT = "\
+  //       PLAN REVIEW COMPLETED; IF 'APPROVED' A BILLING STATEMENT HAS BEEN \
+  //       ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT. IF 'INCOMPLETE' OR \
+  //       'FAILED' A REQUEST FOR ADDITIONAL INFORMATION LETTER HAS BEEN ISSUED \
+  //       BY THE DEPARTMENT TO THE PRIMARY APPLICANT; PLEASE CONTACT THE \
+  //       PRIMARY APPLICANT AS LISTED ON THE APPLICATION FOR PERMIT.\
+  //     ";
+  var FAILED_OR_INCOMPLETE_TEXT = "\
+        PLAN REVIEW COMPLETED; A REQUEST FOR ADDITIONAL INFORMATION LETTER HAS \
+        BEEN ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT; PLEASE CONTACT \
+        THE PRIMARY APPLICANT AS LISTED ON THE APPLICATION FOR PERMIT.\
+      ";
+
   var params = qs(window.location.search.substr(1))
   // Use mustache.js style brackets in templates
   _.templateSettings = { interpolate: /\{\{(.+?)\}\}/g }
@@ -28,21 +42,29 @@
 
         // Rename/manipulate API response to fit our HTML template
         var attrs = response.features[0].attributes
+
+        // handle comments
+        var status = attrs.STATUS,
+            comments = attrs.COMMENTS;
+        if (status === 'FAILED' || status === 'INCOMPLETE') {
+          comments = FAILED_OR_INCOMPLETE_TEXT;
+        }
+
         var templateData = {
           application_number:     attrs.APNO,
-          comments:               attrs.COMMENTS,
-		  stat:					  attrs.STATUS,
-		  stno:					  attrs.STNO,
-		  predir:				  attrs.PREDIR,
-		  stname:				  attrs.STNAME,
-		  suffix:				  attrs.SUFFIX,
-		  apdttm:		          moment(attrs.APDTTM).format("dddd, MMMM Do YYYY"),
-		  suspdt:				  moment(attrs.SUSPDT).format("dddd, MMMM Do YYYY"),
-		  loc:					  attrs.LOC,
-		  apdesc:				  attrs.APDESC,
+          comments:               comments,
+    		  stat:					          status,
+    		  stno:					          attrs.STNO,
+    		  predir:				          attrs.PREDIR,
+    		  stname:				          attrs.STNAME,
+    		  suffix:				          attrs.SUFFIX,
+    		  apdttm:		              moment(attrs.APDTTM).format("dddd, MMMM Do YYYY"),
+    		  suspdt:				          moment(attrs.SUSPDT).format("dddd, MMMM Do YYYY"),
+    		  loc:					          attrs.LOC,
+    		  apdesc:				         attrs.APDESC,
         }
-	
-		
+
+
         // Render template
         resultContainer.html(templates.result(templateData))
       }
@@ -64,4 +86,3 @@
     }
   }
 })(window.jQuery, window._)
-
