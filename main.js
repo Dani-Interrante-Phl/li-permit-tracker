@@ -12,7 +12,8 @@
         PLAN REVIEW COMPLETED; A REQUEST FOR ADDITIONAL INFORMATION LETTER HAS \
         BEEN ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT; PLEASE CONTACT \
         THE PRIMARY APPLICANT AS LISTED ON THE APPLICATION FOR PERMIT.\
-      ";
+      ",
+      DATE_FORMAT = 'dddd, MMMM Do YYYY'
 
   var params = qs(window.location.search.substr(1))
   // Use mustache.js style brackets in templates
@@ -51,19 +52,18 @@
         }
 
         var templateData = {
-          application_number:     attrs.APNO,
-          comments:               comments,
-    		  stat:					          status,
-    		  stno:					          attrs.STNO,
-    		  predir:				          attrs.PREDIR,
-    		  stname:				          attrs.STNAME,
-    		  suffix:				          attrs.SUFFIX,
-    		  apdttm:		              moment(attrs.APDTTM).format("dddd, MMMM Do YYYY"),
-    		  suspdt:				          moment(attrs.SUSPDT).format("dddd, MMMM Do YYYY"),
-    		  loc:					          attrs.LOC,
-    		  apdesc:				         attrs.APDESC,
+          application_number:   attrs.APNO,
+          comments:             comments,
+    		  stat:					        status,
+    		  stno:					        attrs.STNO,
+    		  predir:				        attrs.PREDIR,
+    		  stname:				        attrs.STNAME,
+    		  suffix:				        attrs.SUFFIX,
+    		  apdttm:		            moment(attrs.APDTTM).utc().format(DATE_FORMAT),
+    		  suspdt:				        moment(attrs.SUSPDT).utc().format(DATE_FORMAT),
+    		  loc:					        attrs.LOC,
+    		  apdesc:				        attrs.APDESC,
         }
-
 
         // Render template
         resultContainer.html(templates.result(templateData))
