@@ -58,7 +58,7 @@
 		  } 
 		  
         if (attrs.suspdt = !attrs.suspdt) {
-			suspdt = INACTIVE_DATE
+			attrs.suspdt = INACTIVE_DATE;
 		}
 			
 		
