@@ -83,8 +83,8 @@
     		  predir:				        attrs.PREDIR,
     		  stname:				        attrs.STNAME,
     		  suffix:				        attrs.SUFFIX,
-    		  apdttm:		            formatDate(attrs.APDTTM),
-    		  suspdt:				        formatDate(attrs.SUSPDT),
+    		  apdttm:               formatDate(attrs.APDTTM),
+    		  suspdt:               formatDate(attrs.SUSPDT),
     		  loc:					        attrs.LOC,
     		  apdesc:				        attrs.APDESC,
         }
