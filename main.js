@@ -47,14 +47,18 @@
         // handle comments
         var status = attrs.STATUS,
             comments = attrs.COMMENTS;
-        if (status === 'FAILED' || status === 'INCOMPLETE') {
-          comments = FAILED_OR_INCOMPLETE_TEXT;
-        }
-		// added in else if, only change
-		
-		else if (status === 'INCOMPLETE' && !suspdt ) {
+        
+		// added in else if and switched around order of the two statements
+		if (status === 'INCOMPLETE' && !suspdt ) {
 			comments = attrs.COMMENTS;
 		}
+		
+		else if (status === 'FAILED' || status === 'INCOMPLETE') {
+          comments = FAILED_OR_INCOMPLETE_TEXT;
+        }
+
+		
+		
 
         var templateData = {
           application_number:   attrs.APNO,
