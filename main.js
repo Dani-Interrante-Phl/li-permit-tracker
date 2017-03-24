@@ -57,7 +57,8 @@
 			comments = attrs.COMMENTS;
 		}
 		
-		
+		else (status = attrs.STATUS,
+				commments = attrs.COMMENTS:)
 
 		
 		
