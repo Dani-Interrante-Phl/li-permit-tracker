@@ -75,8 +75,8 @@
     		  predir:				        attrs.PREDIR,
     		  stname:				        attrs.STNAME,
     		  suffix:				        attrs.SUFFIX,
-    		  apdttm:		            moment(attrs.APDTTM).utc().format(DATE_FORMAT),
-    		  suspdt:				        moment(attrs.SUSPDT).utc().format(DATE_FORMAT),
+    		  apdttm:		            	moment(attrs.APDTTM).utc().format(DATE_FORMAT),
+    		  suspdt:				        attrs.SUSPDT ? moment(attrs.SUSPDT).utc().format(DATE_FORMAT) :"Date not set",
     		  loc:					        attrs.LOC,
     		  apdesc:				        attrs.APDESC,
         }
