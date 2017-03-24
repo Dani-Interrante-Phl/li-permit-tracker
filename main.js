@@ -50,6 +50,11 @@
         if (status === 'FAILED' || status === 'INCOMPLETE') {
           comments = FAILED_OR_INCOMPLETE_TEXT;
         }
+		// added in else if, only change
+		
+		else if (status === 'INCOMPLETE' && suspdt == ' ') {
+			comments = attrs.COMMENTS;
+		}
 
         var templateData = {
           application_number:   attrs.APNO,
