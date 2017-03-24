@@ -14,7 +14,7 @@
         THE PRIMARY APPLICANT AS LISTED ON THE APPLICATION FOR PERMIT.\
       ",
       DATE_FORMAT = 'dddd, MMMM Do YYYY',
-	  INACTIVE_DATE = "Date not set"
+	  INVALID_DATE = "Date not set"
 	
   var params = qs(window.location.search.substr(1))
   // Use mustache.js style brackets in templates
@@ -57,8 +57,8 @@
 			  comments = attrs.COMMENTS;
 		  } 
 		  
-        if (attrs.suspdt = !attrs.suspdt) {
-			attrs.suspdt = INACTIVE_DATE;
+        if (!attrs.suspdt) {
+			attrs.suspdt = INVALID_DATE;
 		}
 			
 		
