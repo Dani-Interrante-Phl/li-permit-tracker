@@ -50,12 +50,12 @@
         
 		// added in else if
 		if (status === 'FAILED' || status === 'INCOMPLETE') {
-          comments = FAILED_OR_INCOMPLETE_TEXT;
+          if (status === 'INCOMPLETE' && !suspdt) {
+			  comments = attrs.COMMENTS;
+		  } else {
+		  comments = FAILED_OR_INCOMPLETE_TEXT;
         }
 		
-		else if (status === 'INCOMPLETE' && suspdt == ' '  ) {
-			comments = attrs.COMMENTS;
-		}
 		
 	
 
