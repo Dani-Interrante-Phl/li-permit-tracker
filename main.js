@@ -13,8 +13,7 @@
         BEEN ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT; PLEASE CONTACT \
         THE PRIMARY APPLICANT AS LISTED ON THE APPLICATION FOR PERMIT.\
       ",
-      DATE_FORMAT = 'dddd, MMMM Do YYYY',
-	  INVALID_DATE = "Date not set"
+      DATE_FORMAT = 'dddd, MMMM Do YYYY'
 	
   var params = qs(window.location.search.substr(1))
   // Use mustache.js style brackets in templates
@@ -58,7 +57,7 @@
 		  } 
 		  
         if (!attrs.suspdt) {
-			attrs.suspdt = INVALID_DATE;
+			attrs.suspdt = "Date not set";
 		}
 			
 		
