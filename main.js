@@ -52,7 +52,7 @@
         }
 		// added in else if, only change
 		
-		else (status === 'INCOMPLETE' && !suspdt ) {
+		else if (status === 'INCOMPLETE' && !suspdt ) {
 			comments = attrs.COMMENTS;
 		}
 
