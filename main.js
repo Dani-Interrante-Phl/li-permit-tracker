@@ -56,9 +56,7 @@
 			  comments = attrs.COMMENTS;
 		  } 
 		  
-        if (!attrs.suspdt) {
-			attrs.suspdt = "Date not set";
-		}
+     
 			
 		
 		
@@ -76,7 +74,7 @@
     		  stname:				        attrs.STNAME,
     		  suffix:				        attrs.SUFFIX,
     		  apdttm:		            	moment(attrs.APDTTM).utc().format(DATE_FORMAT),
-    		  suspdt:				        attrs.SUSPDT ? moment(attrs.SUSPDT).utc().format(DATE_FORMAT) :"Date not set",
+    		  suspdt:				        attrs.SUSPDT ? moment(attrs.SUSPDT).utc().format(DATE_FORMAT) :'Date not set',
     		  loc:					        attrs.LOC,
     		  apdesc:				        attrs.APDESC,
         }
