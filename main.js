@@ -48,14 +48,14 @@
         var status = attrs.STATUS,
             comments = attrs.COMMENTS;
         
-		// added in else if and switched around order of the two statements
-		if (status === 'FAILED' || status === 'INCOMPLETE') {
+		// added in else if
+		if (status === 'FAILED' || status === 'INCOMPLETE') 
           comments = FAILED_OR_INCOMPLETE_TEXT;
-        }
+        
 		
-		else if (status === 'INCOMPLETE' && !suspdt ) {
+		else if (status === 'INCOMPLETE' && !suspdt ) 
 			comments = attrs.COMMENTS;
-		}
+		
 		
 		
 
