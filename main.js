@@ -49,13 +49,15 @@
             comments = attrs.COMMENTS;
         
 		// added in else if and switched around order of the two statements
-		if (status === 'INCOMPLETE' && !suspdt ) {
+		if (status === 'FAILED' || status === 'INCOMPLETE') {
+          comments = FAILED_OR_INCOMPLETE_TEXT;
+        }
+		
+		else if (status === 'INCOMPLETE' && !suspdt ) {
 			comments = attrs.COMMENTS;
 		}
 		
-		else if (status === 'FAILED' || status === 'INCOMPLETE') {
-          comments = FAILED_OR_INCOMPLETE_TEXT;
-        }
+		
 
 		
 		
