@@ -13,8 +13,9 @@
         BEEN ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT; PLEASE CONTACT \
         THE PRIMARY APPLICANT AS LISTED ON THE APPLICATION FOR PERMIT.\
       ",
-      DATE_FORMAT = 'dddd, MMMM Do YYYY'
-	
+      DATE_FORMAT = 'dddd, MMMM Do YYYY',
+      INVALID_DATE_TEXT = 'Date not set'
+
   var params = qs(window.location.search.substr(1))
   // Use mustache.js style brackets in templates
   _.templateSettings = { interpolate: /\{\{(.+?)\}\}/g }
@@ -46,24 +47,33 @@
 
         // handle comments
         var status = attrs.STATUS,
-            comments = attrs.COMMENTS;
-        
-		// added in else if
-		if (status === 'FAILED' || status === 'INCOMPLETE') {
-          comments = FAILED_OR_INCOMPLETE_TEXT;
-		
-		  if (status === 'INCOMPLETE' && !attrs.suspdt) 
-			  comments = attrs.COMMENTS;
-		  } 
-		  
-     
-			
-		
-		
-	
+            comments = attrs.COMMENTS
 
-		
-		
+        // if failed, or incomplete and there's a review date
+    		if (status === 'FAILED' || (status === 'INCOMPLETE' && attrs.SUSPDT)) {
+          comments = FAILED_OR_INCOMPLETE_TEXT
+  		  }
+
+        function formatDate(input) {
+          var dateFormatted
+
+          // make sure date isn't just whitespace
+          if (!/\S/.test(input)) {
+            input = null;
+          }
+
+          // if we have a valid string
+          if (input) {
+            // format it with moment
+            dateFormatted = moment(input).utc().format(DATE_FORMAT)
+          }
+          // otherwise return invalid date text
+          else {
+            dateFormatted = INVALID_DATE_TEXT
+          }
+
+          return dateFormatted
+        }
 
         var templateData = {
           application_number:   attrs.APNO,
@@ -73,8 +83,8 @@
     		  predir:				        attrs.PREDIR,
     		  stname:				        attrs.STNAME,
     		  suffix:				        attrs.SUFFIX,
-    		  apdttm:		            	moment(attrs.APDTTM).utc().format(DATE_FORMAT),
-    		  suspdt:				        attrs.SUSPDT ? moment(attrs.SUSPDT).utc().format(DATE_FORMAT) :'Date not set',
+    		  apdttm:		            formatDate(attrs.APDTTM),
+    		  suspdt:				        formatDate(attrs.SUSPDT),
     		  loc:					        attrs.LOC,
     		  apdesc:				        attrs.APDESC,
         }
