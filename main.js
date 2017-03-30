@@ -50,7 +50,7 @@
             comments = attrs.COMMENTS
 
         // if failed, or incomplete and there's a review date
-    		if (status === 'FAILED' || (status === 'INCOMPLETE' && attrs.SUSPDT)) {
+    		if (status === 'FAILED' || (status === 'INCOMPLETE' && attrs.COMPDTTM)) {
           comments = FAILED_OR_INCOMPLETE_TEXT
   		  }
 
@@ -87,6 +87,7 @@
     		  suspdt:               formatDate(attrs.SUSPDT),
     		  loc:					        attrs.LOC,
     		  apdesc:				        attrs.APDESC,
+			  compdttm:						attrs.COMPDTTM
         }
 
         // Render template
