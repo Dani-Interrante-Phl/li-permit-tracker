@@ -87,7 +87,7 @@
     		  suspdt:               formatDate(attrs.SUSPDT),
     		  loc:					        attrs.LOC,
     		  apdesc:				        attrs.APDESC,
-			  compdttm:						attrs.COMPDTTM
+			  compdttm:				formatDate(attrs.COMPDTTM),
         }
 
         // Render template
