@@ -14,7 +14,7 @@
         THE PRIMARY APPLICANT AS LISTED ON THE APPLICATION FOR PERMIT.\
       ",
       DATE_FORMAT = 'dddd, MMMM Do YYYY',
-      INVALID_DATE_TEXT = 'Date not set'
+      INVALID_DATE_TEXT = 'Review Not Yet Completed'
 
   var params = qs(window.location.search.substr(1))
   // Use mustache.js style brackets in templates
