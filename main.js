@@ -54,10 +54,10 @@
           comments = FAILED_OR_INCOMPLETE_TEXT
   		  }
 			
-		//if status is incomplete and there is no COMPDTTM	
-	    //	else (status === 'INCOMPLETE' && attrs.COMPDTTM = '') {
-		//	comments = NO_COMPDTTM 
-		// }
+		if status is incomplete and there is no COMPDTTM	
+	    	else (status === 'INCOMPLETE' && attrs.COMPDTTM === '') {
+			comments = NO_COMPDTTM 
+		 }
 			
         function formatDate(input) {
           var dateFormatted
