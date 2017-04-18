@@ -59,6 +59,9 @@
 			comments = NO_COMPDTTM 
 		 }
 			
+		console.log('testing')	
+			
+			
         function formatDate(input) {
           var dateFormatted
 
