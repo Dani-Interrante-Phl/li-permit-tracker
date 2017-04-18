@@ -54,8 +54,8 @@
           comments = FAILED_OR_INCOMPLETE_TEXT
   		  }
 			
-		if status is incomplete and there is no COMPDTTM	
-	    	else (status === 'INCOMPLETE' && attrs.COMPDTTM === '') {
+		//if status is incomplete and there is no COMPDTTM	
+	    	if (status === 'INCOMPLETE' && attrs.COMPDTTM === '') {
 			comments = NO_COMPDTTM 
 		 }
 			
