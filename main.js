@@ -55,7 +55,7 @@
   		  }
 			
 		//if status is incomplete and there is no COMPDTTM	
-	    	if (status === 'INCOMPLETE' && attrs.COMPDTTM === '') {
+	    	if (status === 'INCOMPLETE' && (!attrs.COMPDTTM || attrs.COMPDTTM === '')) {
 			comments = NO_COMPDTTM 
 		 }
 			
