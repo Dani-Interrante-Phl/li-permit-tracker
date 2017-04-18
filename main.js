@@ -9,12 +9,12 @@
   //       PRIMARY APPLICANT AS LISTED ON THE APPLICATION FOR PERMIT.\
   //     ";
   var FAILED_OR_INCOMPLETE_TEXT = "\
-        PLAN REVIEW COMPLETED; A REQUEST FOR ADDITIONAL INFORMATION LETTER HAS \
-        BEEN ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT; PLEASE CONTACT \
-        THE PRIMARY APPLICANT AS LISTED ON THE APPLICATION FOR PERMIT.\
+        PLAN REVIEW COMPLETED; A REQUEST FOR ADDITIONAL INFORMATION HAS \
+        BEEN ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT.\
       ",
       DATE_FORMAT = 'dddd, MMMM Do YYYY',
-      INVALID_DATE_TEXT = 'Review Not Yet Completed'
+      INVALID_DATE_TEXT = 'Review Not Yet Completed',
+	  NO_COMPDTTM = 'PLAN REVIEW NOT YET COMPLETED; PLEASE ALLOW UNTIL THE SCHEDULED DUE DATE FOR A COMPLETED REVIEW'
 
   var params = qs(window.location.search.substr(1))
   // Use mustache.js style brackets in templates
@@ -53,7 +53,12 @@
     		if (status === 'FAILED' || (status === 'INCOMPLETE' && attrs.COMPDTTM)) {
           comments = FAILED_OR_INCOMPLETE_TEXT
   		  }
-
+			
+		//if status is incomplete and there is no COMPDTTM	
+			if (status === 'INCOMPLETE' && attrs.COMPDTTM = '') {
+			comments = NO_COMPDTTM 
+		  }
+			
         function formatDate(input) {
           var dateFormatted
 
