@@ -55,9 +55,9 @@
   		  }
 			
 		//if status is incomplete and there is no COMPDTTM	
-			if (status === 'INCOMPLETE' && attrs.COMPDTTM = '') {
-			comments = NO_COMPDTTM 
-		  }
+		//	if (status === 'INCOMPLETE' && attrs.COMPDTTM = '') {
+		//	comments = NO_COMPDTTM 
+		//  }
 			
         function formatDate(input) {
           var dateFormatted
