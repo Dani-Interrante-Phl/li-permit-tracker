@@ -35,7 +35,7 @@
     }
     $.getJSON(endpoint, requestParams, function (response) {
       var features = response.features
-      if (features.length < 1) {
+      if (features.length < 0) {
         // If there's no feature, indicate such
         resultContainer.html(templates.error({ application_number : params.id }))
       } else {
