@@ -29,13 +29,13 @@
   if (params.id) {
     resultContainer.html(templates.loading)
     var requestParams = {
-      where: 'APNO = ' + params.id,
+      where: "APNO = ' " + params.id + " '",
       outFields: '*',
       f: 'pjson',
     }
     $.getJSON(endpoint, requestParams, function (response) {
       var features = response.features
-      if (features.length < 1) {
+      if (!features || features.length < 1) {
         // If there's no feature, indicate such
         resultContainer.html(templates.error({ application_number : params.id }))
       } else {
