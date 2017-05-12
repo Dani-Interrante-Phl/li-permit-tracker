@@ -29,7 +29,7 @@
   if (params.id) {
     resultContainer.html(templates.loading)
     var requestParams = {
-      where: "APNO = ' " + params.id + " '",
+      where: "APNO = '" + params.id + "'",
       outFields: '*',
       f: 'pjson',
     }
