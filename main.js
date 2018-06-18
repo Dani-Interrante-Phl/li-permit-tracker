@@ -1,6 +1,6 @@
 (function ($, _) {
   // config
-  var endpoint = 'https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/PermitApplicationStatus/FeatureServer/0?token=qUv7-CWU5Rl67E8SEVE_Hv9rBo8MXKAL7OKwzxEasZ0EN6pDrYaS87qTGSKGJGG4NtaILU0mdh8t7D7ZB89IVUBpSmJ22R6IufnG_muA3l-uaiDnDU_nF70saY3gkvlgE2A-o_co1d6ZI9NGFV2zNW32fmDtT0C_JtxwJPytxxJXFpJnErBncRcNsHY-Z3zprVesZG4I8DMDkzLNIZmTQYlUQ0Zwo6VAK8vKOFayho66N3M5CJkhGDz2JE6-Qc4_'
+  var endpoint = '//gis.phila.gov/arcgis/rest/services/LNI/LI_PERMIT_APPLICATION_STATUS/FeatureServer/1/query'
   // var FAILED_OR_INCOMPLETE_TEXT = "\
   //       PLAN REVIEW COMPLETED; IF 'APPROVED' A BILLING STATEMENT HAS BEEN \
   //       ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT. IF 'INCOMPLETE' OR \
