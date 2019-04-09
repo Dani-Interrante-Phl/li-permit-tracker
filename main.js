@@ -1,13 +1,13 @@
 (function ($, _) {
   // config
-  var endpoint = 'https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/PermitAppStatus/FeatureServer/0/query'
+  var endpoint = 'https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/PermitAppStatus/FeatureServer/0/query?token=oJobWr-L6-Vm1eFqNhDVCk2bl6JNQOmAC94LrsQMyoyjlZD5HA78SwNOJtAUbg-_kbMNsH1q_XLfpG3d1dn7EIBJa7FWS_VeFxOtoxvuuuaVF7r2rzioFeh_zKANlEZCaaXPyo-3Z2GauACqcr1BRvbyObO5BlZOljtlbKl9nIo0w-vtZ2b_uawzZ-wv0wgJMHVGiN-u6rYBKJ7MS-_CapzzQGu-it-4EMxQEWNVxKtb3qkPXzWGjqXCZACvucC0'
   // var FAILED_OR_INCOMPLETE_TEXT = "\
   //       PLAN REVIEW COMPLETED; IF 'APPROVED' A BILLING STATEMENT HAS BEEN \
   //       ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT. IF 'INCOMPLETE' OR \
   //       'FAILED' A REQUEST FOR ADDITIONAL INFORMATION LETTER HAS BEEN ISSUED \
   //       BY THE DEPARTMENT TO THE PRIMARY APPLICANT; PLEASE CONTACT THE \
   //       PRIMARY APPLICANT AS LISTED ON THE APPLICATION FOR PERMIT.\
-  //     ";
+  //     "; 
   var FAILED_OR_INCOMPLETE_TEXT = "\
         PLAN REVIEW COMPLETED; A REQUEST FOR ADDITIONAL INFORMATION HAS \
         BEEN ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT.\
