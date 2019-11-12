@@ -1,6 +1,6 @@
 (function ($, _) {
   // config
-  var endpoint = 'https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/PermitAppStatusTest/FeatureServer/0/query?token=QzI1itgNh8cev993mrEhFr-6DnODhb2y9wtT7JByCbGtC0m_LWQ_SBBEUFvx-XiP0TPYbAX2YP6Rb63M7MQRZow5txq2BAX0MJJ9zZFQmahCT2P7V_3KxPAbSOKIG1pqGcZQ-Iack9w6aTwShFoIw5nEKaXe3qT7I1-kOM8u3h-iXaghfEsFHCnKTYltkJoKbNPXXnWFPPT4kepHvi2_TXOeDqsjZyLvSVGg5sByDTK5dVHWyRpnrrrTCCad32fR'
+  var endpoint = 'https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/PermitAppStatusTest/FeatureServer/0/query?token=QzI1itgNh8cev993mrEhFr-6DnODhb2y9wtT7JByCbGtC0m_LWQ_SBBEUFvx-XiP0TPYbAX2YP6Rb63M7MQRZow5txq2BAX0MJJ9zZFQmahCT2P7V_3KxPAbSOKIG1pqGcZQ-Iack9w6aTwShFoIw5nEKaXe3qT7I1-kOM8u3h-iXaghfEsFHCnKTYltkJoKbNPXXnWFPPT4kepHvi2_TXOeDqsjZyLvSVGg5sByDTK5dVHWyRpnrrrTCCad32fR&'
   // var FAILED_OR_INCOMPLETE_TEXT = "\
   //       PLAN REVIEW COMPLETED; IF 'APPROVED' A BILLING STATEMENT HAS BEEN \
   //       ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT. IF 'INCOMPLETE' OR \
