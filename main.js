@@ -1,6 +1,6 @@
 (function ($, _) {
   // config
-  var endpoint = 'https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/PermitAppStatus/FeatureServer/0?token=3DQmCuS3ONaGhUzQPqvrZvf2wngHSC_lxPJXdMKs_v0gwuL7G6DZnsFBs-NaqMNSezUdyk5RMIkiwEw4Z_QCmsoWwyNwag4Ni2U_bsW9vNo0FLokAORn11-Ij4b6uqe-fFaKw9ClozFR9CdPukmtFibeG6VHKoZ5pizx1qXOBrRJSMsTfTJRtUjV1Au4zjYFMgTjpA9P-8RVi0IYW601yoyq-rrqU1FMfuOi2EeGjVXsQlvObshGJtb7YOkwLbs5&'
+  var endpoint = 'https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/PermitAppStatus/FeatureServer/0'
   // var FAILED_OR_INCOMPLETE_TEXT = "\
   //       PLAN REVIEW COMPLETED; IF 'APPROVED' A BILLING STATEMENT HAS BEEN \
   //       ISSUED BY THE DEPARTMENT TO THE PRIMARY APPLICANT. IF 'INCOMPLETE' OR \
